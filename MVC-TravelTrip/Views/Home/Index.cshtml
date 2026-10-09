@@ -1,0 +1,103 @@
+﻿@using MVC_TravelTrip.Models.Sinifler
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-banner">
+<div class="wrap">
+	<div class="banner">
+		<div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil &amp; Seyahat Bloğum</h2>
+                  
+				<div class="banner-left">
+				   	<div class="con-text">
+							<div class="grid1-img">
+								<img src="~/web/images/glass.png" alt="">
+							</div>
+							<div class="grid1-desc">
+								<p>Restaurantlar</p>
+							</div>
+							<div class="clear"></div>
+					</div>
+					<div class="con-text">
+							<div class="grid1-img">
+								<img src="~/web/images/flight.png" alt="">
+							</div>
+							<div class="grid1-desc">
+								<p>Uçuşlar</p>
+							</div>
+							<div class="clear"></div>
+					</div>
+	<div class="con-text">
+			<div class="grid1-img">
+				<img src="~/web/images/group.png" alt="">
+			</div>
+			<div class="grid1-desc">
+				<p>Yapılacak Şeyler</p>
+			</div>
+			<div class="clear"></div>
+	</div>
+	<div class="con-text">
+			<div class="grid1-img">
+				<img src="~/web/images/key.png" alt="">
+			</div>
+			<div class="grid1-desc">
+				<p>Araba Kiralama</p>
+			</div>
+			<div class="clear"></div>
+	</div>
+   <div class="clear"></div>
+</div>
+<div class="header_bottom_right_images">
+                      
+
+                        <div class="slider" style="width:100%; max-width:620px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li>
+                                        <img src="@x.BlogImage" alt="" style="width:100%; aspect-ratio:620/370; object-fit:cover; display:block;">
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+    </div>
+	       </div>                                        
+	</div>
+    <div class="clear"></div>
+      </div>
+      	<div class="clear"></div>
+      </div>
+      
+     <div class="content">
+      	<div class="wrap">
+      		<div class="wrapper">
+      	<div class="con-top">
+      		<h3>Tatil Seyahat Bloğuna Hoşgeldiniz!</h3>
+                    <p>
+                        Yeni yerler keşfetmeye, farklı kültürleri tanımaya ve unutulmaz seyahat deneyimleri yaşamaya hazır mısınız? Tail Seyahat Blogu; gezi rotaları, keşfedilecek şehirler, tatil önerileri ve seyahat deneyimleriyle yolculuğunuzu daha keyifli hale getirmek için burada.
+
+                        Bazen deniz kenarında huzurlu bir tatil, bazen tarihi sokaklarda keyifli bir keşif… Her yolculuğun kendine özgü bir hikâyesi vardır. Siz de yeni rotalar keşfetmek ve bir sonraki seyahatiniz için ilham almak için blog yazılarımıza göz atabilirsiniz.
+
+                        Çantanızı hazırlayın, yeni keşifler sizi bekliyor!
+                    </p>
+      	</div>
+                @await Component.InvokeAsync("Partial1")
+                <div class="grids">
+      	       
+                 @await Component.InvokeAsync("Partial3")
+                                 
+                      <div>
+                @await Component.InvokeAsync("Partial4")
+                        		
+                        <div class="clear"></div>      
+      	</div>
+     </div>
+      </div>
+      </div></div>
+
+
+
+

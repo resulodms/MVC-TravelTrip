@@ -1,0 +1,58 @@
+﻿@model MVC_TravelTrip.Models.Sinifler.BlogYorum 
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+	<link href="~/web1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="~/web1/css/style.css" rel="stylesheet" type="text/css" />
+}
+	<div class="single">
+		<div class="container">
+			<div class="col-md-8 single-main">
+				@foreach(var x in Model.Deger1 )
+					{ 
+				<div class="single-grid">
+					
+					<img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
+					<br />
+					<a href="/Blog/BlogDetay/@x.Id" >@x.Baslik</a>
+					<p>@x.Aciklama</p>
+					
+					
+				</div>
+				<br />
+				<br />
+					}
+				
+			</div>
+					
+			<div class="col-md-4 side-content">
+				<div class="recent">
+					<h3>Son Bloglar</h3>
+					@foreach (var z in Model.Deger3)
+					{
+						<ul>
+							<li><a href="/Blog/BlogDetay/@z.Id">@z.Baslik </a></li>
+
+						</ul>
+					}
+				</div>
+				<div class="comments">
+					<h3> Son Yorumlar</h3>
+					<ul>
+						<li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+						<li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+						<li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+					</ul>
+				</div>
+			
+		</div>
+		</div>
+	</div>
+
+
+
+
+

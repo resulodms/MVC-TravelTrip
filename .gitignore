@@ -1,0 +1,53 @@
+## Visual Studio / .NET
+.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+launchSettings.local.json
+
+## Build / test results
+TestResults/
+*.log
+*.tlog
+*.pdb
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+
+## Publish
+PublishProfiles/
+*.pubxml
+*.publishproj
+publish/
+
+## Local secrets
+appsettings.Development.local.json
+secrets.json
+
+## Local databases
+*.mdf
+*.ldf
+*.ndf
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini

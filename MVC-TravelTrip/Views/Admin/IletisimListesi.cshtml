@@ -1,0 +1,27 @@
+﻿@model List<MVC_TravelTrip.Models.Sinifler.Iletisim>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Gelen Mesajlar</h3>
+<div class="table-responsive">
+<table class="table table-bordered">
+    <tr>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        
+        <th>Mesaj</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.AdSoyad</td>
+            <td>@x.Mail</td>
+            <td>@x.Konu</td>
+            
+            <td>@x.Mesaj</td>
+        </tr>
+    }
+</table>
+</div>

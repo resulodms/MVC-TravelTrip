@@ -1,0 +1,26 @@
+﻿@using MVC_TravelTrip.Models.Sinifler
+@model List<Hakkimizda>
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="content">
+	<div class="wrap">
+		<div class="about">
+			<h3>Hakkımızda</h3>
+			 
+			@foreach (var x in Model)
+			{
+			<img src="@x.FotoUrl" alt="" />
+			
+			
+				<p>@x.Aciklama</p>
+			}
+
+			
+		</div>
+	</div>
+</div>

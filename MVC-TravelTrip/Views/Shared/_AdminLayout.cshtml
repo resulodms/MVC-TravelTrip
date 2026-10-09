@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] | Admin Paneli</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+    <!-- Sol menü: bilgisayarda sabit, telefonda gizli (☰ ile açılır) -->
+    <nav class="w3-sidebar w3-light-grey w3-bar-block w3-collapse w3-card" style="width:220px; z-index:3;" id="adminMenu">
+        <button class="w3-bar-item w3-button w3-hide-large" onclick="menuKapat()">✕ Menüyü Kapat</button>
+        <h3 class="w3-bar-item">Menüler</h3>
+        <a href="/Admin/Index" class="w3-bar-item w3-button">Bloglar</a>
+        <a href="/Admin/YorumListesi" class="w3-bar-item w3-button">Yorumlar</a>
+        <a href="/Home/Index" class="w3-bar-item w3-button">Siteye Git</a>
+        <a href="/Admin/IletisimListesi" class="w3-bar-item w3-button">İletişim Listesi</a>
+        <a href="/GirisYap/Logout" class="w3-bar-item w3-button">Çıkış Yap</a>
+    </nav>
+
+    <!-- Telefonda menü açıkken arkadaki karartma; tıklayınca menü kapanır -->
+    <div class="w3-overlay w3-hide-large" onclick="menuKapat()" style="cursor:pointer" id="adminOverlay"></div>
+
+    <!-- Sayfa içeriği -->
+    <div class="w3-main" style="margin-left:220px">
+
+        <div class="w3-container w3-teal">
+            <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="menuAc()">☰</button>
+            <h4 style="display:inline-block; margin:12px 0;">Admin Yönetim Paneli</h4>
+        </div>
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+    <script>
+        function menuAc() {
+            document.getElementById("adminMenu").style.display = "block";
+            document.getElementById("adminOverlay").style.display = "block";
+        }
+        function menuKapat() {
+            document.getElementById("adminMenu").style.display = "none";
+            document.getElementById("adminOverlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>
